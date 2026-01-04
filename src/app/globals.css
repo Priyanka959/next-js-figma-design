@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --bg: #ffffff;
+  --paper: #FCF8F3;
+  --fg: #222222;
+  --muted: #898989;
+  --secondary: #666666;
+  --primary: #B88E2F; /* gold */
+  --primary-dark: #A07925;
+  --primary-light: #FFF3E3; /* CTA card */
+
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --font-heading: 'Poppins', var(--font-sans);
+  --h1: 48px;
+  --h2: 32px;
+  --h3: 20px;
+
+  /* Layout tokens */
+  --container-max: 1200px;
+  --radius-md: 12px;
+  --card-shadow: 0 10px 30px rgba(13, 17, 23, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-text-secondary: var(--secondary);
+  --font-sans: var(--font-sans);
+}
+
+/* Base */
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container utility for non-tailwind parts */
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Headings */
+h1 { font-family: var(--font-heading); font-weight: 700; font-size: var(--h1); line-height: 1.05; }
+h2 { font-family: var(--font-heading); font-weight: 700; font-size: var(--h2); }
+h3 { font-weight: 600; font-size: var(--h3); }
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: none;
+}
+.btn-primary:hover { background: var(--primary-dark); }
+
+/* Card */
+.card {
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--card-shadow);
+}
+
+/* Hero specific helpers */
+.hero-section { background: var(--paper); }
+.hero-cta-card { background: var(--primary-light); border-radius: 16px; box-shadow: var(--card-shadow); }
+
+/* Product badges */
+.badge-circle { width: 44px; height: 44px; border-radius: 9999px; display:flex; align-items:center; justify-content:center; font-weight:700; }
+
+/* Utility for muted text */
+.muted { color: var(--muted); }
+
+/* Small responsive tweaks (if tailwind utilities aren't used) */
+@media (max-width: 768px) {
+  :root { --h1: 36px; --h2: 28px; }
+}
