@@ -14,7 +14,6 @@
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-photo-gallery": "^8.0.0",
     "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
