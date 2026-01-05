@@ -1,7 +1,6 @@
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import PageHero from '@/components/shared/PageHero';
-import Features from '@/components/shared/Features';
 import Products from '@/components/home/Products';
 
 export const metadata = {
@@ -16,7 +15,6 @@ export default function AboutPage() {
       <main>
         <PageHero title="About" />
         <Products />
-        <Features />
       </main>
       <Footer />
     </div>

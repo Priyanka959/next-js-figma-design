@@ -1,7 +1,6 @@
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import PageHero from '@/components/shared/PageHero';
-import Features from '@/components/shared/Features';
 import ContactSection from '@/components/contact/ContactSection';
 
 export const metadata = {
@@ -16,7 +15,6 @@ export default function ContactPage() {
       <main>
         <PageHero title="Contact" />
         <ContactSection />
-        <Features />
       </main>
       <Footer />
     </div>
